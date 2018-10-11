@@ -1,31 +1,56 @@
 <template>
     <div>
-        <h2>About Us</h2>
-        <h4>Mission</h4>
-        <p>
-            The SHU Enactus club creates community activites and funraisers for the Greensburg, PA areas.
-            jrngjnetgntehgrjnfkerjg placeholder text! Insert images and all sorts of other cool stuff.
-        </p>
-        <h4>The Team</h4>
-        <p>Steele, Bailey, Coltin, Zak, etc, etc, etc, etc</p>
-        <h4>Contact Us</h4>
-        <h5>Email</h5> 
-        <p>s.eckenrode@setonhill.edu</p>
-        <p>enactus@setonhill.edu</p>
-        <h5>Phone</h5>
-        <p>724-777-7777</p>
+        <el-row>
+            <h2>About Us</h2>
+              <el-col :span="24" class="">
+                <el-collapse v-model="activeNames" @change="handleChange">
+                    <el-collapse-item title="Mission" name="1">
+                <h4>
+                The SHU Enactus club creates community activites and funraisers for the Greensburg, PA areas. placeholder text! Insert images and all sorts of other cool stuff.
+                </h4>
+                    </el-collapse-item>
+                    <el-collapse-item title="The Team" name="2">
+                <img src="../assets/team.jpg" alt="" class="team">
+                <h4>Melissa, Steele, Bailey, Coltin, Zak, Sebastian, Kaitlyn, Jordan, and many more!</h4>
+                    </el-collapse-item>
+                    <el-collapse-item title="Contact Us" name="3">
+                        <h4>Email</h4> 
+                        <p><a href="mailto:enactus@setonhill.edu">enactus@setonhill.edu</a></p>
+                        <p><a href="mailto:s.eckenrode@setonhill.edu">s.eckenrode@setonhill.edu</a></p>
+                        <h4>Phone</h4>
+                        <p>412-303-8012</p>
+                    </el-collapse-item>
+                </el-collapse>
+                <h4>Learn more at the <a href="https://enactus.org" target="_blank">official Enactus website!</a></h4>
+            </el-col>
 
+        </el-row>
 
-        <h4>Learn more at the <a href="www.enactus.org">official Enactus website!</a></h4>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'About'
+        name: 'About',
+        data: function(){
+            return {
+                activeNames: ['1'],
+            }
+        },
+        methods: {
+            handleChange(val) {
+                console.log(val);
+            }
+        }
     }
 </script>
 
 <style scoped>
-
+    .image {
+        max-width: 100%;
+    }
+    .team{
+        height: 350px;
+        width:auto;
+    }
 </style>

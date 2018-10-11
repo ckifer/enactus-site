@@ -3,7 +3,7 @@
         <el-row>
             <h2>About Us</h2>
               <el-col :span="24" class="">
-                <el-collapse v-model="activeNames" @change="handleChange">
+                <el-collapse accordion v-model="activeNames" @change="handleChange">
                     <el-collapse-item title="Mission" name="1">
                 <h4>
                 The SHU Enactus club creates community activites and funraisers for the Greensburg, PA areas. placeholder text! Insert images and all sorts of other cool stuff.

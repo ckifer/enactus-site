@@ -10,8 +10,13 @@
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmOBy-nkVrTUlK23PZsR0Yn-5jsVyv_RC2iUCT6HLzDV_dDA/viewform?embedded=true" 
                 width="640" height="744" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>            
             </el-col>
-            <el-col class="" :span="24" style="margin-top: 2em">   
+        </el-row>
+        <el-row>
+            <el-col class="" :span="12" style="margin-top: 2em">   
                 <img class="image" src="../assets/Fun Run t-shirt backs.png" alt="">      
+            </el-col>
+            <el-col class="" :span="12" style="margin-top: 2em">   
+                <img class="image" src="../assets/shirtDesign.png" alt="">      
             </el-col>
         </el-row>
 

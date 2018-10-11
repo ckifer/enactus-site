@@ -39,7 +39,11 @@
                     {
                         index: 5,
                         img: 'enactus.png'
-                    },
+                    }, 
+                    {
+                        index: 6,
+                        img: 'steeleDonation.jpg'
+                    }
                 ]
             }
         }

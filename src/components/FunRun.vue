@@ -7,8 +7,18 @@
             </el-col>
             <el-col :span="12" class="">
                 <h1>Sign Up</h1>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmOBy-nkVrTUlK23PZsR0Yn-5jsVyv_RC2iUCT6HLzDV_dDA/viewform?embedded=true" 
-                width="640" height="744" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>            
+            <div class="auto-resizable-iframe">
+                <div>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmOBy-nkVrTUlK23PZsR0Yn-5jsVyv_RC2iUCT6HLzDV_dDA/viewform?embedded=true" 
+                width="" height="" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> 
+                </div>
+            </div>           
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="24">
+                <hr>
+                <h1 style="font-size: 2em">2017 Fun Run</h1>
             </el-col>
         </el-row>
         <el-row>
@@ -33,5 +43,24 @@
     .image {
         width: 600px;
         height: auto;
+    }
+
+    .auto-resizable-iframe{
+        max-width: 700px;
+        margin: 0px auto;
+    }
+
+    .auto-resizable-iframe > div {
+        position: relative;
+        padding-bottom: 75%;
+        height: 0px;
+    }
+
+    .auto-resizable-iframe iframe {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
     }
 </style>

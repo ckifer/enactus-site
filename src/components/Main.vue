@@ -1,14 +1,21 @@
 <template>
     <div>
         <section class="main-section">
-            <h1 class="centered">{{ text }}</h1>
-            <el-col :span="24" class="">
-                <el-carousel :interval="5000" type="" height="600px">
-                <el-carousel-item v-for="item in items" :key="item.index">
-                    <img class="image" :src="require(`@/assets/${item.img}`)" alt="">
-                </el-carousel-item>
-                </el-carousel>
-            </el-col>
+            <h1 class="centered" style="font-size: 1.7em">{{ text }}</h1>
+            <el-row>
+                <el-col :span="1" style="opacity: 0">-</el-col>
+                <el-col :span="11">
+                    <div class="auto-resizable-iframe">
+                        <div>
+                            <iframe class="auto-resizable-iframe" src="https://www.youtube.com/embed/_YaotJ1A_jo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </el-col>
+                <el-col :span="11">
+                    <img src="../assets/home-logo.png" alt="" class="image">
+                </el-col>
+                <el-col :span="1" style="opacity: 0">-</el-col>
+            </el-row>
         </section>
     </div>
 </template>
@@ -60,7 +67,27 @@
 
     .image {
         height: auto;
-        max-height: 100%;
+        max-width: 100%;
+        transform: translateY(50%); 
+    }
+
+    .auto-resizable-iframe{
+        max-width: 700px;
+        margin: 0px auto;
+    }
+
+    .auto-resizable-iframe > div {
+        position: relative;
+        padding-bottom: 75%;
+        height: 0px;
+    }
+
+    .auto-resizable-iframe iframe {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
     }
 
 </style>

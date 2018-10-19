@@ -9,8 +9,7 @@
                 <h1>Sign Up</h1>
             <div class="auto-resizable-iframe">
                 <div>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmOBy-nkVrTUlK23PZsR0Yn-5jsVyv_RC2iUCT6HLzDV_dDA/viewform?embedded=true" 
-                width="" height="" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> 
+                    <p>Sign Up Coming Soon...</p> 
                 </div>
             </div>           
             </el-col>
@@ -18,7 +17,8 @@
         <el-row>
             <el-col :span="24">
                 <hr>
-                <h1 style="font-size: 2em">2017 Fun Run</h1>
+                <h1 style="font-size: 2em">Previous Fun Runs</h1>
+                <h1 style="font-size: 1.5em">2017</h1>
             </el-col>
         </el-row>
         <el-row>

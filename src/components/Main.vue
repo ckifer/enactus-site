@@ -3,15 +3,14 @@
         <section class="main-section">
             <h1 class="centered" style="font-size: 1.7em">{{ text }}</h1>
             <el-row>
-                <el-col :span="1" style="opacity: 0">-</el-col>
-                <el-col :span="11">
+                <el-col :span="14">
                     <div class="auto-resizable-iframe">
                         <div>
-                            <iframe class="auto-resizable-iframe" src="https://www.youtube.com/embed/_YaotJ1A_jo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube-nocookie.com/embed/4Z9SMG30WXw?modestbranding=1;controls=0;showinfo=0;rel=0;fs=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>                      
                         </div>
                     </div>
                 </el-col>
-                <el-col :span="11">
+                <el-col :span="8">
                     <img src="../assets/home-logo.png" alt="" class="image">
                 </el-col>
                 <el-col :span="1" style="opacity: 0">-</el-col>
@@ -68,11 +67,11 @@
     .image {
         height: auto;
         max-width: 100%;
-        transform: translateY(50%); 
+        transform: translateY(40%); 
     }
 
     .auto-resizable-iframe{
-        max-width: 700px;
+        max-width: 650px;
         margin: 0px auto;
     }
 
@@ -87,7 +86,8 @@
         top: 0px;
         left: 0px;
         width: 100%;
-        height: 100%;
+        height: 75%;
+        transform: translateY(5%); 
     }
 
 </style>

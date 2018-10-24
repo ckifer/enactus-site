@@ -1,13 +1,13 @@
 <template>
     <b-container fluid>
         <b-row>
-            <b-col cols="4"></b-col>
-            <b-col cols="4">
+            <b-col cols="3"></b-col>
+            <b-col md="6">
                 <h2 class="mb-3">Sign Up</h2>
                 <a href="https://setonhill.campuslabs.com/engage/submitter/form/start/230974" target="_blank"
                     class="btn btn-danger btn-lg btn-block mb-3" role="button">Sign up for the 2018 Fun Run on Shine!</a>
             </b-col>
-            <b-col cols="4"></b-col>
+            <b-col cols="3"></b-col>
         </b-row>
         <b-row class="text-center">
             <b-col cols="12">

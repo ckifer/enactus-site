@@ -1,32 +1,59 @@
 <template>
-    <div>
-        <el-row>
+    <b-container fluid class="text-center">
+        <b-row class="text-center">
             <h2>About Us</h2>
-              <el-col :span="24" class="">
-                <el-collapse accordion v-model="activeNames" @change="handleChange">
-                    <el-collapse-item title="Mission" name="1">
-                <h4>
-                The SHU Enactus club creates community activites and funraisers for the Greensburg, PA areas. placeholder text! Insert images and all sorts of other cool stuff.
-                </h4>
-                    </el-collapse-item>
-                    <el-collapse-item title="The Team" name="2">
-                <img src="../assets/team.jpg" alt="" class="team">
-                <h4>Melissa, Steele, Bailey, Coltin, Zak, Sebastian, Kaitlyn, Jordan, and many more!</h4>
-                    </el-collapse-item>
-                    <el-collapse-item title="Contact Us" name="3">
-                        <h4>Email</h4> 
-                        <p><a href="mailto:enactus@setonhill.edu">enactus@setonhill.edu</a></p>
-                        <p><a href="mailto:s.eckenrode@setonhill.edu">s.eckenrode@setonhill.edu</a></p>
-                        <h4>Phone</h4>
-                        <p>412-303-8012</p>
-                    </el-collapse-item>
-                </el-collapse>
-                <h4>Learn more at the <a href="https://enactus.org" target="_blank">official Enactus website!</a></h4>
-            </el-col>
-
-        </el-row>
-
-    </div>
+            <b-col cols="12" class="mt-3">
+                 <div role="tablist">
+                    <b-card no-body class="mb-1">
+                    <b-card-header header-tag="header" class="p-1" role="tab">
+                        <b-btn block href="#" v-b-toggle.mission variant="light">
+                            {{ menuInfo[0].title }}
+                        </b-btn>
+                    </b-card-header>
+                    <b-collapse id="mission" visible accordion="my-accordion" role="tabpanel">
+                        <b-card-body>
+                        <p class="card-text">
+                            {{  menuInfo[0].text }}
+                        </p>
+                        </b-card-body>
+                    </b-collapse>
+                    </b-card>
+                    <b-card no-body class="mb-1">
+                    <b-card-header header-tag="header" class="p-1" role="tab">
+                        <b-btn block href="#" v-b-toggle.team variant="light">
+                            {{ menuInfo[1].title }}
+                        </b-btn>
+                    </b-card-header>
+                    <b-collapse id="team" accordion="my-accordion" role="tabpanel">
+                        <b-card-body>
+                            <img src="../assets/team.jpg" class="image team" alt="">
+                        <p class="card-text">
+                            {{  menuInfo[1].text }}
+                        </p>
+                        </b-card-body>
+                    </b-collapse>
+                    </b-card>
+                    <b-card no-body class="mb-1">
+                    <b-card-header header-tag="header" class="p-1" role="tab">
+                        <b-btn block href="#" v-b-toggle.contact variant="light">
+                            {{ menuInfo[2].title }}
+                        </b-btn>
+                    </b-card-header>
+                    <b-collapse id="contact" accordion="my-accordion" role="tabpanel">
+                        <b-card-body>
+                            {{  menuInfo[2].text }}
+                            <h4>Phone</h4>
+                            <p>412-303-8012</p>
+                            <h4>Email</h4> 
+                            <p><a href="mailto:enactus@setonhill.edu">enactus@setonhill.edu</a></p>
+                            <p><a href="mailto:s.eckenrode@setonhill.edu">s.eckenrode@setonhill.edu</a></p>
+                        </b-card-body>
+                    </b-collapse>
+                    </b-card>
+                </div>
+            </b-col>
+        </b-row>
+    </b-container>
 </template>
 
 <script>
@@ -34,12 +61,21 @@
         name: 'About',
         data: function(){
             return {
-                activeNames: ['1'],
-            }
-        },
-        methods: {
-            handleChange(val) {
-                console.log(val);
+                menuInfo: [
+                    {
+                        title: "Our Mission",
+                        text: "The Seton Hill University Enactus club aims to leverage entrepreneurial leadership and"
+                                + " action to create a better, more sustainable world for us all."
+                    },
+                    {
+                        title: "Our Team",
+                        text: "Our team features some of the brightest college students at Seton Hill!"
+                    },
+                    {
+                        title: "Contact Us",
+                        text: ""
+                    }
+                ]
             }
         }
     }
@@ -47,10 +83,20 @@
 
 <style scoped>
     .image {
+        margin-bottom: 1em;
         max-width: 100%;
     }
     .team{
-        height: 350px;
-        width:auto;
+        height:400px;
+        width: auto;
+    }
+    h2 {
+        margin: 0 auto;
+    }
+
+    @media only screen and (max-width: 650px) {
+        .team{
+            height: auto;
+        }
     }
 </style>

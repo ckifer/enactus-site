@@ -1,5 +1,5 @@
 <template>
-   <div>&copy; 2018 Seton Hill Enactus Club. All Rights Reserved.</div>
+   <footer>&copy; 2018 Seton Hill Enactus Club. All Rights Reserved.</footer>
 </template>
 
 <script>
@@ -9,5 +9,7 @@
 </script>
 
 <style scoped>
-
+    footer {
+        margin: 2em;
+    }
 </style>

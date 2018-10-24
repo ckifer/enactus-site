@@ -1,48 +1,30 @@
 <template>
 <div>
-    <el-menu title="SHU Enactus Club" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <li class="el-menu-item mb-2" role="menuitem"> <a href="/"><img src="../assets/home-logo.png" class="nav-logo"/></a></li>
-        <el-menu-item index="1" class="title" active="true">Seton Hill University Enactus Club</el-menu-item>
-        <el-menu-item index="2">About Us</el-menu-item>
-        <el-menu-item index="3">Enactus Fun Run</el-menu-item>
-        <!-- <el-menu-item index="4">Hat Project</el-menu-item>
-        <el-menu-item index="5">Women's Wear Drive</el-menu-item> -->
-    </el-menu>
+    <b-navbar toggleable="md" type="light" variant="">
+    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+
+    <b-navbar-brand href="#/" class="brand">
+        <img src="../assets/home-logo.png" class="nav-logo "/>
+    </b-navbar-brand>
+
+        <b-collapse is-nav id="nav_collapse">
+
+            <b-navbar-nav class="">
+                <h4 class="p-3">
+                    <b-nav-item class="" href="#/">Seton Hill Enactus Club</b-nav-item>
+                </h4>
+                
+                <b-nav-item class="p-3 mt-1" href="#/about">About Us</b-nav-item>
+                <b-nav-item class="p-3 mt-1" href="#/funrun">Enactus Fun Run</b-nav-item>
+            </b-navbar-nav>
+        </b-collapse>
+    </b-navbar>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Header',
-        data() {
-            return {
-                activeIndex: '1'
-            };
-        },
-        methods: {
-            handleSelect(key, keyPath) {
-                this.activeIndex = key
-                switch(this.activeIndex){
-                    case '1':
-                        this.$router.push('/')
-                        break
-                    case '2':
-                        this.$router.push('/about')
-                        break
-                    case '3':
-                        this.$router.push('/funrun')
-                        break
-                    case '4':
-                        this.$router.push('/hatproject')
-                        break
-                    case '5':
-                        this.$router.push('/wwd')
-                        break
-                    default:
-                        this.$router.keyPath('Home')
-                }
-            }
-        }
+        name: 'Header'
     }
 </script>
 
@@ -55,5 +37,8 @@
         vertical-align: top;
         width: 96px;
         height:40px;
+    }
+    .brand {
+        transform: translateY(-15px);
     }
 </style>

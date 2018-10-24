@@ -1,22 +1,18 @@
 <template>
-    <div>
-        <section class="main-section">
-            <h1 class="centered" style="font-size: 1.7em">{{ text }}</h1>
-            <el-row>
-                <el-col :span="14">
-                    <div class="auto-resizable-iframe">
-                        <div>
-                            <iframe src="https://www.youtube-nocookie.com/embed/4Z9SMG30WXw?modestbranding=1;controls=0;showinfo=0;rel=0;fs=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>                      
-                        </div>
-                    </div>
-                </el-col>
-                <el-col :span="8">
-                    <img src="../assets/home-logo.png" alt="" class="image">
-                </el-col>
-                <el-col :span="1" style="opacity: 0">-</el-col>
-            </el-row>
-        </section>
-    </div>
+    <b-container fluid>
+        <h2 class="text-center mt-1 mb-5" style="font-size: 1.7em">{{ text }}</h2>
+        <b-row class="align-items-center">
+            <b-col md="6" class="mx-auto" style="margin-bottom: 5em">
+                    <img src="../assets/home-logo.png" alt="Image" class="image-fluid">
+                
+            </b-col>
+            <b-col md="6" class="mt-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/4Z9SMG30WXw?modestbranding=1;controls=0;showinfo=0;rel=0;fs=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>                      
+                </div>
+            </b-col>
+        </b-row>
+    </b-container>
 </template>
 
 <script>
@@ -57,37 +53,10 @@
 </script>
 
 <style scoped>
-    .main-section {
-        height: 35rem;
-        background-size: contain;
-        display: block;
-        text-align: center;
-    }
-
-    .image {
-        height: auto;
+    .image-fluid {
         max-width: 100%;
-        transform: translateY(40%); 
+        height: auto;
     }
-
-    .auto-resizable-iframe{
-        max-width: 650px;
-        margin: 0px auto;
-    }
-
-    .auto-resizable-iframe > div {
-        position: relative;
-        padding-bottom: 75%;
-        height: 0px;
-    }
-
-    .auto-resizable-iframe iframe {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 75%;
-        transform: translateY(5%); 
-    }
+    
 
 </style>

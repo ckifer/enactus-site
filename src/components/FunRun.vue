@@ -1,36 +1,43 @@
 <template>
-    <div>
-        <el-row>
-            <el-col :span="12" class="image">
-                <h1>Information</h1>
-                <img class="image" src="../assets/fun run poster.jpg" alt="">
-            </el-col>
-            <el-col :span="12" class="">
-                <h1>Sign Up</h1>
-            <div class="auto-resizable-iframe">
-                <div>
-                    <p>Sign Up Coming Soon...</p> 
-                </div>
-            </div>           
-            </el-col>
-        </el-row>
-        <el-row>
-            <el-col :span="24">
+    <b-container fluid>
+        <b-row>
+            <b-col cols="4"></b-col>
+            <b-col cols="4">
+                <h2 class="mb-3">Sign Up</h2>
+                <a href="https://setonhill.campuslabs.com/engage/submitter/form/start/230974" target="_blank"
+                    class="btn btn-danger btn-lg btn-block mb-3" role="button">Sign up for the 2018 Fun Run on Shine!</a>
+            </b-col>
+            <b-col cols="4"></b-col>
+        </b-row>
+        <b-row class="text-center">
+            <b-col cols="12">
+                <h2 class="mb-3">Information</h2>
+            </b-col>                           
+        </b-row>
+        <b-row>
+            <b-col cols="2"></b-col>
+            <b-col cols="8" class="image-fluid" style="overflow: auto; max-height: 400px">
+                <img class="image-fluid" src="../assets/fun run poster.jpg" alt="">
+            </b-col>
+            <b-col cols="2"></b-col>
+        </b-row>
+        <b-row>
+            <b-col cols="12">
                 <hr>
-                <h1 style="font-size: 2em">Previous Fun Runs</h1>
-                <h1 style="font-size: 1.5em">2017</h1>
-            </el-col>
-        </el-row>
-        <el-row>
-            <el-col class="" :span="12" style="margin-top: 2em">   
-                <img class="image" src="../assets/Fun Run t-shirt backs.png" alt="">      
-            </el-col>
-            <el-col class="" :span="12" style="margin-top: 2em">   
-                <img class="image" src="../assets/shirtDesign.png" alt="">      
-            </el-col>
-        </el-row>
+                <h2 style="">Previous Fun Runs</h2>
+                <h3 style="">2017</h3>
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col class="" cols="6" style="margin-top: 2em">   
+                <img class="image-fluid" src="../assets/Fun Run t-shirt backs.png" alt="">      
+            </b-col>
+            <b-col class="" cols="6" style="margin-top: 2em">   
+                <img class="image-fluid" src="../assets/shirtDesign.png" alt="">      
+            </b-col>
+        </b-row>
 
-    </div>
+    </b-container>
 </template>
 
 <script>
@@ -40,9 +47,8 @@
 </script>
 
 <style scoped>
-    .image {
-        width: 600px;
-        height: auto;
+    img {
+        width: 100%;
     }
 
     .auto-resizable-iframe{

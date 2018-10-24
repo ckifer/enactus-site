@@ -1,16 +1,10 @@
 <template>
   <div id="app">
-    <el-container>
-      <el-header>
-        <Header></Header>
-      </el-header>
-      <el-main>
-        <router-view></router-view>
-      </el-main>
-      <el-footer>
-        <Footer></Footer>
-      </el-footer>
-    </el-container>
+    <b-container fluid>
+      <Header></Header>
+      <router-view></router-view>
+      <Footer></Footer>
+    </b-container>
   </div>
 </template>
 
@@ -30,13 +24,11 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
 </style>
